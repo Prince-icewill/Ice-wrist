@@ -1,0 +1,138 @@
+.pillars {
+  padding: 150px 0;
+  background: var(--black);
+}
+
+.pillars__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+
+.pillars__heading {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 5vw, 76px);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  max-width: 500px;
+}
+
+.pillars__subhead {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(245, 242, 236, 0.45);
+  max-width: 280px;
+  text-align: right;
+  line-height: 1.7;
+}
+
+.pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.pillar-card {
+  background: rgba(255, 255, 255, 0.025);
+  padding: 44px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.35s ease, opacity 0.85s ease, transform 0.85s ease;
+  border-top: 1px solid rgba(168, 204, 215, 0.06);
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ice), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.pillar-card:hover {
+  background: rgba(168, 204, 215, 0.04);
+}
+
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-card__num-bg {
+  font-family: var(--font-display);
+  font-size: 90px;
+  font-weight: 800;
+  color: rgba(168, 204, 215, 0.04);
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.pillar-card__index {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ice);
+  margin-bottom: 36px;
+  display: block;
+}
+
+.pillar-card__title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.pillar-card__desc {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(245, 242, 236, 0.55);
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.pillar-card__img-wrap {
+  overflow: hidden;
+}
+
+.pillar-card__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.5) brightness(0.9);
+  transition: filter 0.4s ease, transform 0.6s ease;
+}
+
+.pillar-card:hover .pillar-card__img {
+  filter: saturate(0.85) brightness(1);
+  transform: scale(1.03);
+}
+
+@media (max-width: 880px) {
+  .pillars__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .pillars__subhead {
+    text-align: left;
+  }
+  .pillars__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,68 @@
+.icewill {
+  padding: 130px 48px;
+  background: var(--white);
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.icewill__left {
+  flex: 1;
+}
+
+.icewill__heading {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 5vw, 76px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.icewill__heading em {
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--ice-dark);
+}
+
+.icewill__desc {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(8, 8, 8, 0.6);
+  max-width: 480px;
+  font-weight: 300;
+}
+
+.icewill__right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.icewill__note {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  color: rgba(8, 8, 8, 0.45);
+  margin-bottom: 32px;
+  max-width: 240px;
+  margin-left: auto;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+@media (max-width: 880px) {
+  .icewill {
+    flex-direction: column;
+    padding: 80px 24px;
+    align-items: flex-start;
+  }
+  .icewill__right {
+    text-align: left;
+  }
+  .icewill__note {
+    margin-left: 0;
+  }
+}

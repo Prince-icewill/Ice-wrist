@@ -1,0 +1,105 @@
+.cta {
+  padding: 150px 48px;
+  text-align: center;
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta__bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(120px, 18vw, 280px);
+  font-weight: 800;
+  color: rgba(168, 204, 215, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.04em;
+}
+
+.cta__heading {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7vw, 108px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.94;
+  margin-bottom: 40px;
+}
+
+.cta__heading em {
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-weight: 300;
+  color: var(--ice-bright);
+}
+
+.cta__desc {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-style: italic;
+  color: rgba(245, 242, 236, 0.45);
+  margin-bottom: 52px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* Shared button styles */
+.btn {
+  display: inline-block;
+  padding: 16px 44px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--white);
+  color: var(--white);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn--ice {
+  background: var(--ice-dark);
+  border-color: var(--ice-dark);
+  color: var(--ice-bright);
+}
+
+.btn--ice:hover {
+  background: var(--ice-bright);
+  border-color: var(--ice-bright);
+  color: var(--black);
+}
+
+.btn--dark {
+  border-color: var(--black);
+  color: var(--black);
+  background: transparent;
+}
+
+.btn--dark:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+@media (max-width: 880px) {
+  .cta {
+    padding: 100px 24px;
+  }
+}

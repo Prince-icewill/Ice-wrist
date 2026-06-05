@@ -1,0 +1,38 @@
+.quote-marquee {
+  background: var(--ice-dark);
+  padding: 72px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(168, 204, 215, 0.12);
+}
+
+.quote-marquee__track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marqueeReverse 28s linear infinite;
+}
+
+.quote-marquee__item {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(168, 204, 215, 0.15);
+  padding: 0 48px;
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+}
+
+.quote-marquee__item--solid {
+  color: rgba(200, 232, 245, 0.85);
+}
+
+.quote-marquee__gem {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--ice-bright);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin: 0 12px;
+}

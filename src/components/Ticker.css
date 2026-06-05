@@ -1,0 +1,28 @@
+.ticker {
+  background: var(--ice-dark);
+  padding: 13px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(168, 204, 215, 0.15);
+  border-bottom: 1px solid rgba(168, 204, 215, 0.15);
+}
+
+.ticker__track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+.ticker__item {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(168, 204, 215, 0.85);
+  padding: 0 36px;
+  flex-shrink: 0;
+}
+
+.ticker__sep {
+  color: rgba(168, 204, 215, 0.3);
+  margin-left: 8px;
+}

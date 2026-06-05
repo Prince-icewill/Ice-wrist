@@ -1,0 +1,58 @@
+.signature {
+  position: relative;
+  height: 82vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.signature__bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=1600&q=80') center center / cover no-repeat;
+  filter: saturate(0.5) brightness(0.6);
+}
+
+.signature__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8, 8, 8, 0.88) 40%,
+    rgba(8, 8, 8, 0.3) 100%
+  );
+}
+
+.signature__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 48px;
+  max-width: 1380px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.signature__heading {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 6.5vw, 105px);
+  font-weight: 800;
+  line-height: 0.93;
+  text-transform: uppercase;
+  max-width: 680px;
+}
+
+.signature__heading em {
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-weight: 300;
+  color: var(--ice-bright);
+}
+
+@media (max-width: 880px) {
+  .signature__content {
+    padding: 0 24px;
+  }
+  .signature__heading {
+    font-size: 42px;
+  }
+}

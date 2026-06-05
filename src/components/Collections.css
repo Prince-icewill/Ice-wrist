@@ -1,0 +1,120 @@
+.collections {
+  padding: 150px 0;
+  background: var(--cream);
+  color: var(--black);
+}
+
+.section-label--dark {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(8, 8, 8, 0.38);
+  margin-bottom: 24px;
+  display: block;
+}
+
+.collections__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 72px;
+  align-items: end;
+}
+
+.collections__heading {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 5vw, 76px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--black);
+  margin-top: 16px;
+}
+
+.collections__subhead {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(8, 8, 8, 0.55);
+  font-weight: 300;
+}
+
+.collections__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 32px;
+  padding: 32px 0;
+  border-top: 1px solid rgba(8, 8, 8, 0.1);
+  align-items: center;
+  transition:
+    padding-left 0.3s ease,
+    opacity 0.85s ease,
+    transform 0.85s ease;
+}
+
+.col-item:hover {
+  padding-left: 14px;
+}
+
+.col-item:last-child {
+  border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+}
+
+.col-item__num {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: rgba(8, 8, 8, 0.3);
+}
+
+.col-item__body {
+  flex: 1;
+}
+
+.col-item__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--black);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.col-item__desc {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(8, 8, 8, 0.55);
+  max-width: 640px;
+  font-weight: 300;
+}
+
+.col-item__arrow {
+  font-size: 20px;
+  color: rgba(8, 8, 8, 0.2);
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: var(--font-display);
+}
+
+.col-item:hover .col-item__arrow {
+  color: var(--ice-dark);
+  transform: translateX(6px);
+}
+
+@media (max-width: 880px) {
+  .collections__header {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .col-item {
+    grid-template-columns: 40px 1fr auto;
+    gap: 16px;
+  }
+}

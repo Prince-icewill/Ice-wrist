@@ -1,0 +1,111 @@
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ice);
+  margin-bottom: 48px;
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.section-label.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal--delay-1 { transition-delay: 0.1s; }
+.reveal--delay-2 { transition-delay: 0.22s; }
+.reveal--delay-3 { transition-delay: 0.34s; }
+
+.about {
+  padding: 130px 0;
+  background: var(--black);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.about__left p {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 1.3vw, 20px);
+  line-height: 1.8;
+  color: rgba(245, 242, 236, 0.68);
+  margin-bottom: 22px;
+  font-weight: 300;
+}
+
+.about__left p strong {
+  color: var(--white);
+  font-weight: 400;
+}
+
+.about__sig {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 28px;
+  color: var(--ice-bright);
+  margin-top: 32px;
+  opacity: 0.8;
+}
+
+.about__right {
+  position: relative;
+}
+
+.about__right img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.7);
+}
+
+.about__tag {
+  position: absolute;
+  bottom: -18px;
+  left: -18px;
+  background: var(--ice-dark);
+  border: 1px solid rgba(168, 204, 215, 0.2);
+  padding: 18px 22px;
+  font-family: var(--font-display);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ice);
+  line-height: 2.2;
+}
+
+@media (max-width: 880px) {
+  .container {
+    padding: 0 24px;
+  }
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
